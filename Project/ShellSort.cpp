@@ -6,7 +6,7 @@ void ShellSort::PrintCounters()
     ISort::PrintCounters();
 }
 
-void ShellSort::Sort(std::vector<int>& arr, int size)
+void ShellSort::AbsoluteSort(std::vector<int>& arr, int size)
 {
 	for (int gap = size/2; gap > 0; gap/=2)
 		for (int i = gap; i < size; i++)
@@ -24,4 +24,24 @@ void ShellSort::Sort(std::vector<int>& arr, int size)
 
 		arr[j] = temp;
 		} 
+}
+
+void ShellSort::Sort(std::vector<int>& arr, int size)
+{
+	for (int gap = size / 2; gap > 0; gap /= 2)
+		for (int i = gap; i < size; i++)
+		{
+			int temp = arr[i];
+			int j;
+			comparison_counter++;
+			for (j = i; j >= gap && (arr[j - gap]) > temp; j -= gap)
+			{
+				swap_counter++;
+				arr[j] = arr[j - gap];
+				if (j == gap)
+					comparison_counter--;
+			}
+
+			arr[j] = temp;
+		}
 }

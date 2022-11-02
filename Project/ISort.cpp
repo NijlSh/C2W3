@@ -14,7 +14,7 @@ int ISort::GetSwapCountrt()
 
 void ISort::PrintCounters()
 {
-	std::cout << "Comparisions" << "\t\t" << "swaps" << std::endl;
+	std::cout << "Сравнения" << "\t\t" << "изменения" << std::endl;
 	std::cout << "\t" << comparison_counter << "\t\t" << swap_counter << std::endl;
 }
 

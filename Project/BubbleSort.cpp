@@ -6,7 +6,7 @@ void BubbleSort::PrintCounters()
 	ISort::PrintCounters();
 }
 
-void BubbleSort::Sort(std::vector<int>& arr, int size)
+void BubbleSort::AbsoluteSort(std::vector<int>& arr, int size)
 {
 	bool end = true;
 	for (int i = 0; i < size - 1; i++)
@@ -22,6 +22,28 @@ void BubbleSort::Sort(std::vector<int>& arr, int size)
 			}
 
 		}
-		if (end)return;
+		if (end) 
+			return;
+	}
+}
+
+void BubbleSort::Sort(std::vector<int>& arr, int size)
+{
+	bool end = true;
+	for (int i = 0; i < size - 1; i++)
+	{
+		for (int j = 0; j < size - i - 1; j++)
+		{
+			comparison_counter++;
+			if (arr[j] > arr[j + 1])
+			{
+				swap_counter++;
+				std::swap(arr[j], arr[j + 1]);
+				end = false;
+			}
+
+		}
+		if (end)
+			return;
 	}
 }

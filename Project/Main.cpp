@@ -22,10 +22,10 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	setlocale(LC_CTYPE, "RU");
+	setlocale(LC_ALL, "Russian");
 
 	int const sorts_count = 5;
-	std::cout << "Контрольная работа №2, вариант 5, сделано студентом группы 415 Шарашидзе Н.Л." << std::endl
+	std::cout << "Контрольная работа №4, вариант 4, сделано студентом группы 415 Шарашидзе Н.Л." << std::endl
 		<< "Необходимо упорядочить каждую нечетную строку по возрастанию абсолютных величин, каждый четный столбец по возрастанию." << std::endl
 		<< "Для этого необходимо использовать методы: пузырьковой, отбора, вставки, Шелла и быстрой сортировки." << std::endl
 		<< "Вывести на экран неупорядоченный(один раз) и упорядоченные(для каждого из методов) массивы данных." << std::endl
@@ -78,6 +78,7 @@ int main()
 		std::cout << "1 - Да\n2 - Нет" << std::endl;
 		Answer continue_choice = static_cast<Answer> (InputCheck::CheckMenu(2));
 		if (continue_choice == Answer::No) return 0;		
+		system("cls");
 	}
 	
 }

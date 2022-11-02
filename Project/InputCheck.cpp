@@ -34,7 +34,7 @@ int InputCheck::CheckIntValuePlus()
 		{
 			value = stoi(value_input);
 
-			if (value < 0)
+			if (value <= 0)
 				throw std::exception("NegativeInt");
 			else 
 				return value;

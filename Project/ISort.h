@@ -21,7 +21,10 @@ public:
 
 	virtual void PrintCounters();
 
+	virtual void AbsoluteSort(std::vector<int>& arr, int size) = 0;
+
 	virtual void Sort(std::vector<int>& arr, int size) = 0;
+
 
 	virtual ~ISort() = default;
 

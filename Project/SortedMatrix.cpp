@@ -1,6 +1,6 @@
 #include "SortedMatrix.h"
 
-std::vector<std::vector<int>> SortedMatrix::SortColums(std::vector<std::vector<int>> matrix, std::shared_ptr<ISort> sort)
+std::vector<std::vector<int>> SortedMatrix::SortLines(std::vector<std::vector<int>> matrix, std::shared_ptr<ISort> sort)
 {
 	std::vector<int> temp_column;
 	for (int i = 1; i < number_of_colums; i += 2)
@@ -12,11 +12,11 @@ std::vector<std::vector<int>> SortedMatrix::SortColums(std::vector<std::vector<i
 	return matrix;
 }
 
-std::vector<std::vector<int>> SortedMatrix::SortLines(std::vector<std::vector<int>> matrix, std::shared_ptr<ISort> sort)
+std::vector<std::vector<int>> SortedMatrix::SortClumns(std::vector<std::vector<int>> matrix, std::shared_ptr<ISort> sort)
 {
 	for (int i = 0; i < number_of_lines; i += 2)
 	{
-		sort -> Sort(matrix[i], number_of_colums);
+		sort -> AbsoluteSort(matrix[i], number_of_colums);
 	}
 	return matrix;
 }
@@ -26,7 +26,7 @@ int SortedMatrix::GetNumberOflines()
 	return number_of_lines;
 }
 
-int SortedMatrix::GEtNumberOfColums()
+int SortedMatrix::GetNumberOfColums()
 {
 	return number_of_colums;
 }

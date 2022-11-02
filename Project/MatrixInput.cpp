@@ -60,7 +60,7 @@ std::vector<std::vector<int>> FileInput()
 	{
 		try
 		{
-			name = GetFileName(output);
+			name = GetFileName(input);
 			file.open(name);
 		}
 		catch (const std::exception&)

@@ -36,7 +36,7 @@ void SaveData(std::vector<std::shared_ptr<ISort>>& sorts_case, std::vector < std
 	file << "\nОтсортированные четные столбцы." << std::endl;
 	for (int i = 0; i < sorts_matrix[0]->GetNumberOflines(); i++)
 	{
-		for (int j = 0; j < sorts_matrix[0]->GEtNumberOfColums(); j++)
+		for (int j = 0; j < sorts_matrix[0]->GetNumberOfColums(); j++)
 		{
 			file << matrix_colums[i][j] << "\t";
 		}
@@ -46,7 +46,7 @@ void SaveData(std::vector<std::shared_ptr<ISort>>& sorts_case, std::vector < std
 	file << "Отсортированные нечетные строки." << std::endl;
 	for (int i = 0; i < sorts_matrix[0]->GetNumberOflines(); i++)
 	{
-		for (int j = 0; j < sorts_matrix[0]->GEtNumberOfColums(); j++)
+		for (int j = 0; j < sorts_matrix[0]->GetNumberOfColums(); j++)
 		{
 			file << matrix_colums[i][j] << "\t";
 		}

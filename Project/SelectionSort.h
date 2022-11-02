@@ -9,5 +9,7 @@ public:
 
 	void Sort(std::vector<int>& arr, int size) override;
 
+	void AbsoluteSort(std::vector<int>& arr, int size) override;
+
 };
 
