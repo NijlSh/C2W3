@@ -9,7 +9,6 @@ int CheckMenu(int items)
 		std::cout << "Ââîä: ";
 		std::getline(std::cin, value_input);
 		std::cout << std::endl;
-		std::cin.sync();
 
 		try
 		{
