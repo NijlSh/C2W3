@@ -73,7 +73,9 @@ std::vector<std::vector<int>> FileInput()
 		{
 			int lines = (InputCheck::CheckLineUnsInt(file));
 			int colums = (InputCheck::CheckLineUnsInt(file));
-		
+			if (lines <= 0 || colums <= 0) 
+
+
 
 			for (int i = 0; i < lines; i++)
 			{

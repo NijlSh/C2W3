@@ -12,7 +12,7 @@ std::string FileInput()
 		if (file_path.find(".txt") >= std::string::npos)
 		{
 			std::cout << "Не текстовый файл. Повторите ввод." << std::endl;
-			return false;
+			continue;
 		}
 
 		if (!std::ifstream(file_path)) {
@@ -46,13 +46,13 @@ std::string FileOutput()
 	{
 		std::string file_path;
 
-		std::cout << "Сохранить из: ";
+		std::cout << "Сохранить в: ";
 		getline(std::cin, file_path);
 
 		if (file_path.find(".txt") >= std::string::npos) 
 		{
 			std::cout << "Не текстовый файл. Повторите ввод." << std::endl;
-			return false;
+			continue;
 		}
 
 		if (std::ifstream(file_path))
